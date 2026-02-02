@@ -1,19 +1,24 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.1022
+# Visual Studio Version 18
+VisualStudioVersion = 18.2.11415.280 d18.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TiberianDawn", "TiberianDawn\TiberianDawn.vcxproj", "{1380ED08-82A3-49C2-A171-1915574B3382}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RedAlert", "RedAlert\RedAlert.vcxproj", "{DA948ED9-EF67-4813-94B7-995BE956786E}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RedAlert", "REDALERT\RedAlert.vcxproj", "{DA948ED9-EF67-4813-94B7-995BE956786E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Release|x64 = Release|x64
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1380ED08-82A3-49C2-A171-1915574B3382}.Release|x64.ActiveCfg = Release|x64
+		{1380ED08-82A3-49C2-A171-1915574B3382}.Release|x64.Build.0 = Release|x64
 		{1380ED08-82A3-49C2-A171-1915574B3382}.Release|x86.ActiveCfg = Release|Win32
 		{1380ED08-82A3-49C2-A171-1915574B3382}.Release|x86.Build.0 = Release|Win32
+		{DA948ED9-EF67-4813-94B7-995BE956786E}.Release|x64.ActiveCfg = Release|x64
+		{DA948ED9-EF67-4813-94B7-995BE956786E}.Release|x64.Build.0 = Release|x64
 		{DA948ED9-EF67-4813-94B7-995BE956786E}.Release|x86.ActiveCfg = Release|Win32
 		{DA948ED9-EF67-4813-94B7-995BE956786E}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection

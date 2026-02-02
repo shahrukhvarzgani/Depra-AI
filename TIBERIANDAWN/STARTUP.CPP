@@ -34,11 +34,32 @@
  *   Prog_End -- Cleans up library systems in prep for game exit.                              *
  *   main -- Initial startup routine (preps library systems).                                  *
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+#pragma pack(push, 8)
+#include <Windows.h>
+#pragma pack(pop)
+
+#include <stdio.h>
 
 #include	"function.h"
 #include	<conio.h>
 #include	<io.h>
 #include  "ccdde.h"
+
+ // ---------- Depra logging helper (GLOBAL) ----------
+static void Depra_Log(const char* msg)
+{
+	// Create folders (CreateDirectoryA is fine if they already exist)
+	CreateDirectoryA("C:\\Dev", NULL);
+	CreateDirectoryA("C:\\Dev\\CnC", NULL);
+	CreateDirectoryA("C:\\Dev\\CnC\\logs", NULL);
+
+	FILE* f = fopen("C:\\Dev\\CnC\\logs\\depra_test.txt", "a");
+	if (f) {
+		fprintf(f, "%s\r\n", msg);
+		fclose(f);
+	}
+}
+// -----------------------------------------------
 
 bool Read_Private_Config_Struct(char *profile, NewConfigType *config);
 void Delete_Swap_Files(void);
@@ -55,7 +76,6 @@ void Check_From_WChat(char *wchat_name);
 bool SpawnedFromWChat = false;
 bool ProgEndCalled = false;
 
-static void Shaw_Log(const char* msg)
 extern "C"{
 	bool __cdecl Detect_MMX_Availability(void);
 	void __cdecl Init_MMX(void);
@@ -166,7 +186,7 @@ int DLL_Startup(const char * command_line_in)
 	strcpy(command_line, command_line_in);
 
 	CCDebugString ("C&C95 - Starting up.\n");
-
+	Depra_Log("Depra AI: DLL_Startup reached (mod DLL is running).");
 
 	//WindowsTimer = new WinTimerClass(60,FALSE);
 	//CD_Test();
