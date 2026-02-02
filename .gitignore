@@ -1,9 +1,23 @@
 
-# Visual Studio files
+# Visual Studio
 .vs/
 *.user
+*.suo
+*.VC.db
+*.VC.VC.opendb
 
-# Output object and binary folders
-[Dd]ebug/
-[Rr]elease/
-[Bb]in/
+# Build folders
+**/Debug/
+**/Release/
+**/x64/
+**/Win32/
+**/bin/
+**/obj/
+
+# Logs
+*.log
+*.txt
+
+# Temporary files
+*.tmp
+*.bak

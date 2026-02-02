@@ -55,7 +55,7 @@ void Check_From_WChat(char *wchat_name);
 bool SpawnedFromWChat = false;
 bool ProgEndCalled = false;
 
-
+static void Shaw_Log(const char* msg)
 extern "C"{
 	bool __cdecl Detect_MMX_Availability(void);
 	void __cdecl Init_MMX(void);
